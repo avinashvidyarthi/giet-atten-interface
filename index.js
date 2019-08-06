@@ -11,7 +11,7 @@ function fetch_det() {
     }
     $.ajax({
         type: "GET",
-        url: "http://giet-atten.herokuapp.com/test/"+roll+"&&"+pass,
+        url: "https://giet-atten.herokuapp.com/test/"+roll+"&&"+pass,
         success: function (response) {
             //console.log(response);
             $("#form_sb_btn").removeAttr('disabled');
