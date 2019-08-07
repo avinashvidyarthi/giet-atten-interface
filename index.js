@@ -1,8 +1,18 @@
+var isLoading=false;
+
 $(document).ready(function () {
     console.log("Site ready!!!");
 });
 
 function fetch_det() {
+    setTimeout(() => {
+        if(isLoading){
+            alert("Can't fetch attendance!!!\nServer is not responding.");
+            $("#form_sb_btn").removeAttr('disabled');
+            $("#form_sb_btn").html("Fetch Details");
+            return;
+        }
+    }, 15000);
     var roll=$("#std_roll").val();
     var pass=$("#std_pass").val();
     if(roll==="" || pass===""){
@@ -14,6 +24,7 @@ function fetch_det() {
         url: "https://giet-atten.herokuapp.com/test/"+roll+"&&"+pass,
         success: function (response) {
             //console.log(response);
+            isLoading=false;
             $("#form_sb_btn").removeAttr('disabled');
             $("#form_sb_btn").html("Fetch Details");
             if(response.status==='error' && response.msg==='login_failed'){
@@ -58,6 +69,7 @@ function fetch_det() {
             $("#output_area").html(out);
         },
         beforeSend:function(){
+            isLoading=true;
             $("#form_sb_btn").attr('disabled', 'disabled');
             $("#form_sb_btn").html("Fetching...<br>Might take some time!!!");
         }
