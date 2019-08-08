@@ -38,10 +38,10 @@ function fetch_det() {
             var out="<b class='mt-2 mb-2'>"+response.stud+"</b>";
 
             if(response.cls_needed<=0){
-                out+="<h5 class='text-success mt-2'>You can bunk "+(-1*response.cls_needed)+" classes. Still your attendance will be 80%!!!</h5>";
+                out+="<h5 class='text-success text-center text-justify mt-2'>You can bunk "+(-1*response.cls_needed)+" classes. Still your attendance will be 80%!!!</h5>";
             }
             else{
-                out+="<h5 class='text-danger mt-2'>You have to attend "+(response.cls_needed)+" classes. Then your attendance will be 80%.</h5>";
+                out+="<h5 class='text-danger text-center text-justify mt-2'>You have to attend "+(response.cls_needed)+" classes. Then your attendance will be 80%.</h5>";
             }
 
             out+="<div class='table-responsive'><table width=100% class='table-striped mt-3'>";
