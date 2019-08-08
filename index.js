@@ -12,7 +12,7 @@ function fetch_det() {
             $("#form_sb_btn").html("Fetch Details");
             return;
         }
-    }, 15000);
+    }, 25000);
     var roll=$("#std_roll").val();
     var pass=$("#std_pass").val();
     if(roll==="" || pass===""){
