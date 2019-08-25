@@ -24,10 +24,21 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116679066-4"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
 
         gtag('config', 'UA-116679066-4');
+    </script>
+    <!-- adsense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-7188653556623106",
+            enable_page_level_ads: true
+        });
     </script>
 
     <!-- Required meta tags -->
@@ -35,8 +46,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title>GIET Attendance</title>
     <!-- chrome theme color-->
@@ -63,8 +73,7 @@
                     <div id="output_area">
                         <h4 class="mt-4">Check your attendance:</h4>
                         <label class="mt-3">Roll No:</label>
-                        <input type="text" id="std_roll" autofocus style="text-transform: uppercase"
-                            class="form-control" placeholder="Roll No"><br>
+                        <input type="text" id="std_roll" autofocus style="text-transform: uppercase" class="form-control" placeholder="Roll No"><br>
                         <label>Password:</label>
                         <input type="text" id="std_pass" placeholder="Password" class="form-control"><br>
                         <button class="btn btn-primary btn-block" id="form_sb_btn" onclick="fetch_det()">Fetch
