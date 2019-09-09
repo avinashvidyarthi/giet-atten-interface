@@ -14,7 +14,8 @@ function fetch_det() {
             return;
         }
     }, 25000);
-    var roll = $("#std_roll").val();
+    var roll = $("#std_roll").val().toUpperCase();
+    //console.log(roll);
     var pass = $("#std_pass").val();
     if (roll === "" || pass === "") {
         alert("Feilds can not be empty!!!");
