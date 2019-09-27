@@ -8,12 +8,12 @@ $(document).ready(function () {
 function fetch_det() {
     setTimeout(() => {
         if (isLoading) {
-            alert("Can't fetch attendance!!!\nServer is not responding.");
+            swal("Error","Can't fetch attendance!!!\nServer is not responding.","error");
             $("#form_sb_btn").removeAttr('disabled');
             $("#form_sb_btn").html("Fetch Details");
             return;
         }
-    }, 25000);
+    }, 30000);
     var roll = $("#std_roll").val().toUpperCase();
     //console.log(roll);
     var pass = $("#std_pass").val();
