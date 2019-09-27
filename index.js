@@ -18,7 +18,7 @@ function fetch_det() {
     //console.log(roll);
     var pass = $("#std_pass").val();
     if (roll === "" || pass === "") {
-        alert("Feilds can not be empty!!!");
+        swal("ERROR","Feilds can not be empty!","error");
         return;
     }
     $.ajax({
@@ -30,11 +30,11 @@ function fetch_det() {
             $("#form_sb_btn").removeAttr('disabled');
             $("#form_sb_btn").html("Fetch Details");
             if (response.status === 'error' && response.msg === 'login_failed') {
-                alert("Incorrect Username or Password!!!");
+                swal("Error","Incorrect Username or Password!","error");
                 return;
             }
             if (response.status === 'error') {
-                alert("Something went wrong!!!");
+                swal("Error","Something not seems right!","error");
                 return;
             }
             var out = "<b class='mt-2 mb-2'>" + response.stud + "</b>";
