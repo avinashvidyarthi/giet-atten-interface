@@ -94,3 +94,13 @@ function toggleFullScreen() {
         cancelFullScreen.call(doc);
     }
 }
+
+
+function show_pass_toggle(){
+    if($("#pass_toggle").is(":checked")){
+        $("#std_pass").attr("type","text");
+    }
+    else{
+        $("#std_pass").attr("type","password");
+    }
+}
