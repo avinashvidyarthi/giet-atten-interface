@@ -34,7 +34,7 @@
       "sizes": "384x384"
     },
     {
-      "src": ".src/img/logo-512x512.png",
+      "src": "src/img/logo-512x512.png",
       "type": "image/png",
       "sizes": "512x512"
     }

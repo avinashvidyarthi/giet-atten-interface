@@ -1,5 +1,11 @@
 var isLoading = false;
 
+if('serviceWorker' in navigator){
+    navigator.serviceWorker.register('/sw.js').then(function(){
+        console.log("Service worker registered");
+    });
+}
+
 $(document).ready(function () {
     console.log("Site ready!!!");
     //$("#tg-btn").trigger('click');
@@ -79,21 +85,21 @@ function fetch_det() {
 }
 
 
-function toggleFullScreen() {
-    console.log("Toggling...");
-    var doc = window.document;
-    var docEl = doc.documentElement;
+// function toggleFullScreen() {
+//     console.log("Toggling...");
+//     var doc = window.document;
+//     var docEl = doc.documentElement;
 
-    var requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
-    var cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
+//     var requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
+//     var cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
 
-    if (!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
-        requestFullScreen.call(docEl);
-    }
-    else {
-        cancelFullScreen.call(doc);
-    }
-}
+//     if (!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
+//         requestFullScreen.call(docEl);
+//     }
+//     else {
+//         cancelFullScreen.call(doc);
+//     }
+// }
 
 
 function show_pass_toggle(){
