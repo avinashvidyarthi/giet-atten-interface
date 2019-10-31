@@ -15,11 +15,11 @@
 
     <!-- manifest link -->
     <link rel="manifest" crossorigin="use-credentials"
-        href="https://avinashvidyarthi.github.io/giet-atten-interface/manifest.json" />
+        href="./manifest.json" />
 
     <!-- og images -->
-    <meta property="og:image" content="https://avinashvidyarthi.github.io/giet-atten-interface/logo.png" />
-    <meta property="og:image:secure_url" content="https://avinashvidyarthi.github.io/giet-atten-interface/logo.png" />
+    <meta property="og:image" content="http://avinashvidyarthi.github.io/giet-atten-interface/src/img/logo.png" />
+    <meta property="og:image:secure_url" content="https://avinashvidyarthi.github.io/giet-atten-interface/src/img/logo.png" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1080" />
     <meta property="og:image:height" content="1060" />
@@ -55,8 +55,8 @@
     <!-- sweetalert CDN -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!-- additional javascript -->
-    <script src="./index.js"></script>
-    <link rel="icon" href="./logo.png" sizes="16x16" type="image/png">
+    <script src="./src/index.js"></script>
+    <link rel="icon" href="./src/img/logo.png" sizes="16x16" type="image/png">
 </head>
 
 <body style="background-color: black">
@@ -68,7 +68,7 @@
             <div class="col-md-6">
                 <div class="jumbotron mt-5 p-3 bg-white">
                     <center>
-                        <img class="img-fluid" src="./web-logo.jpg" alt="GIET Logo">
+                        <img class="img-fluid" src="./src/img/web-logo.jpg" alt="GIET Logo">
                         <!-- <h3 style="color: rgb(7, 7, 207)">GIET UNIVERSITY</h3> -->
                     </center>
                     <div id="output_area">
@@ -81,7 +81,7 @@
                         <label>Password:</label>
                         <input type="password" id="std_pass" placeholder="Case sensative!!!" class="form-control">
                         <div class="checkbox pt-2">
-                            <input type="checkbox" id="pass_toggle" onchange="show_pass_toggle()">Show Password
+                            <input type="checkbox" id="pass_toggle" onchange="show_pass_toggle()"> Show Password
                         </div>
                         <br>
                         <button class="btn btn-primary btn-block" id="form_sb_btn" onclick="fetch_det()">Fetch

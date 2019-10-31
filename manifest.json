@@ -1,17 +1,48 @@
 {
-  "short_name": "GIET Attendance",
+  "short_name": "GIET",
   "name": "GIET Attendance",
   "description":"Find how many class you need to get to 80% attendance!!!",
   "icons": [
     {
-      "src": "logo.png",
+      "src": "src/img/logo-48x48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "src/img/logo-96x96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "src/img/logo-192x192.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "src/img/logo-192x192.png",
       "type": "image/png",
       "sizes": "192x192"
+    },
+    {
+      "src": "src/img/logo-256x256.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "src/img/logo-384x384.png",
+      "type": "image/png",
+      "sizes": "384x384"
+    },
+    {
+      "src": ".src/img/logo-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ],
-  "start_url": "/",
+  "start_url": "index.html",
   "background_color": "#ffffff",
   "display": "standalone",
-  "scope": "/",
-  "theme_color": "#000000"
+  "scope": ".",
+  "theme_color": "#000000",
+  "orientation":"portrait"
 }
