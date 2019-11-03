@@ -8,7 +8,7 @@ if('serviceWorker' in navigator){
 
 $(document).ready(function () {
     console.log("Site ready!!!");
-    $("#output_area").html("<h2 class='text-danger'>Portal Under Maintainance!!</h2>");
+    //$("#output_area").html("<h2 class='text-danger text-center'>Portal Under Maintainance!!</h2>");
     //$("#tg-btn").trigger('click');
 });
 
