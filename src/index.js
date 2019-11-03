@@ -1,13 +1,14 @@
 var isLoading = false;
 
 if('serviceWorker' in navigator){
-    navigator.serviceWorker.register('/giet-atten-interface/sw.js').then(function(){
+    navigator.serviceWorker.register('/sw.js').then(function(){
         console.log("Service worker registered");
     });
 }
 
 $(document).ready(function () {
     console.log("Site ready!!!");
+    $("#output_area").html("<h2 class='text-danger'>Portal Under Maintainance!!</h2>");
     //$("#tg-btn").trigger('click');
 });
 
